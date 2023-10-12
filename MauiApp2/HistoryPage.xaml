@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.HistoryPage"
+             xmlns:viewmodel="clr-namespace:MauiApp2.ViewModels"
+             x:DataType="viewmodel:HistoryViewModel"
+             Title="Szczegóły">
+
+    <ContentPage.Resources>
+        <Style x:Key="labelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Wychudzenie: &lt; 17"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Style="{StaticResource labelStyle}"/>
+        <Label 
+            Text="Niedowaga: 17 - 18.5"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Style="{StaticResource labelStyle}"/>
+        <Label 
+            Text="Waga prawidłowa: 18.5 - 25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Style="{StaticResource labelStyle}"/>
+        <Label 
+            Text="Nadwaga: 25 - 30"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Style="{StaticResource labelStyle}"/>
+        <Label 
+            Text="I st. otyłości: 30 - 35"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Style="{StaticResource labelStyle}"/>
+        <Label 
+            Text="II st. otyłości: 35 - 40"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Style="{StaticResource labelStyle}"/>
+        <Label 
+            Text="Nadwaga skrajna: &gt; 40"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Style="{StaticResource labelStyle}"/>
+    </VerticalStackLayout>
+</ContentPage>

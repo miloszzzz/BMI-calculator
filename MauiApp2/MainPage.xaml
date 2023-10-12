@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             xmlns:viewmodel="clr-namespace:MauiApp2.ViewModels"
+             x:DataType="viewmodel:MainViewModel">
+
+    
+    <Grid RowDefinitions="50, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+            ColumnDefinitions=".25*, .75*"
+            Padding="10, 10"
+            RowSpacing="10"
+          
+            ColumnSpacing="10">
+
+        <Image Grid.ColumnSpan="2"
+                Grid.Row="0"
+            Source="bmi.png"
+            HeightRequest="100"
+            VerticalOptions="Start"
+            HorizontalOptions="Center" />
+
+        <Label Text="Wzrost"
+                FontSize="20"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                Grid.Row="1"
+                Grid.Column="0"/>
+
+        <Entry Placeholder="cm"
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="{Binding TextCm}"
+               Keyboard="Numeric">
+
+        </Entry>
+
+        <Label Text="Waga"
+                FontSize="20"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="0"/>
+
+        <Entry Placeholder="kg"
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="{Binding TextKg}"
+               Keyboard="Numeric">
+        </Entry>
+
+        <Button Text="Oblicz"
+                FontSize="40"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="2"
+                HeightRequest="100"
+                Command="{Binding CalcCommand}"/>
+
+        <Label Text=""
+                FontSize="20"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"/>
+
+        <Label Text="Wynik:"
+                FontSize="20"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                Grid.Row="5"
+                Grid.ColumnSpan="1"/>
+
+        <Label Text="{Binding Bmi, StringFormat='{0:F2}'}"
+                FontSize="40"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="5"
+                Grid.Column="2"/>
+
+        <Label Text="{Binding TextResult}"
+                FontSize="40"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="6"
+                Grid.ColumnSpan="2"/>
+
+        <Button Text="Szczegóły"
+                FontSize="40"
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                HeightRequest="100"
+                WidthRequest="300"
+                Margin="0, 200, 0, 0"
+                Command="{Binding ClickCommand}"/>
+    </Grid>
+
+
+</ContentPage>
