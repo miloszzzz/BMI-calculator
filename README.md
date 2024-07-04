@@ -1,1 +1,3 @@
-### Simple MAUI project
+# BMI-calculator
+
+Simple project with MAUI
